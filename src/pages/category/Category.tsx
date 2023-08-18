@@ -113,7 +113,7 @@ const Catalog = () => {
                                 )
                           )
                         }
-                        className="text-[10px]"
+                        className="cursor-pointer"
                       />
                       <label
                         htmlFor={item}
