@@ -1,5 +1,5 @@
 import { Footer } from "../components/Footer";
-import { useState, ChangeEvent } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
   Navbar,
@@ -133,7 +133,7 @@ const Layout = () => {
                   <input
                     type="search"
                     value={search}
-                    onChange={(e: ChangeEvent) =>
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                       setSearch(e.target.value.trim().toLowerCase())
                     }
                     placeholder="Название товара"
