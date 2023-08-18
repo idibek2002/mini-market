@@ -100,9 +100,6 @@ const Product = () => {
             ) ? (
               <Link to={'/cart'}>
               <Button
-                onClick={() =>
-                  dispatch(addProduct({ id: data.id, quantity: 1 }))
-                }
                 ripple={false}
                 fullWidth={true}
                 className="bg-[#ffda46] text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"

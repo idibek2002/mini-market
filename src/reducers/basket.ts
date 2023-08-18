@@ -13,9 +13,10 @@ type TProduct = {
   title: string;
   quantity: number;
 }
+const storage:string | null= localStorage.getItem('card')
 export const slice = createSlice({
     name: 'basket',
-  initialState:JSON.parse(localStorage.getItem('card')) || {
+  initialState:storage?JSON.parse(storage): {
     products: []
   },
   reducers: {
