@@ -54,7 +54,6 @@ const Layout = () => {
             <div className="w-full flex items-center h-14 justify-between text-blue-gray-900">
               <Link to={"/"}>
                 <h1
-                  variant="h4"
                   className="mr-4 cursor-pointer py-1.5 lg:ml-2 text-[20px] font-[700] sm:text-[25px]"
                 >
                   Market
