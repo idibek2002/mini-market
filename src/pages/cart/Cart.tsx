@@ -49,7 +49,7 @@ const Cart = () => {
                   {cart?.map((el: TProduct) => {
                     return (
                       <tr key={el.id} className="lg:min-h-[50px]">
-                        <td className="flex items-center flex-col gap-x-5 min-h-[50px]">
+                        <td className="flex items-center flex-col sm:flex-row gap-x-5 min-h-[50px]">
                           <picture className="hidden sm:block">
                             <img
                               src={el.thumbnail}
@@ -72,7 +72,7 @@ const Cart = () => {
                               onClick={() => dispatch(decrement(el.id))}
                               color="blue"
                               disabled={el.quantity == 1}
-                              className=" h-10 flex items-center justify-center text-[18px]"
+                              className="w-[20px] h-10 flex items-center justify-center text-[18px]"
                             >
                               -
                             </Button>
@@ -81,7 +81,7 @@ const Cart = () => {
                               onClick={() => dispatch(increment(el.id))}
                               color="blue"
                               disabled={el.quantity == el.stock}
-                              className=" h-10 flex items-center justify-center text-[18px]"
+                              className="w-[20px] h-10 flex items-center justify-center text-[18px]"
                             >
                               +
                             </Button>
