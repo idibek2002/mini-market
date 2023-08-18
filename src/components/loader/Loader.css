@@ -1,0 +1,32 @@
+.image {
+  background-image: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.5) 50%,
+      transparent 100%
+    ),
+    linear-gradient(#ddd 250px, transparent 0);
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite;
+}
+.title {
+  background-image: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.5) 50%,
+      transparent 100%
+    ),
+    linear-gradient(#ddd 250px, transparent 0);
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite;
+  padding: 15px 30px;
+}
+@keyframes animloader {
+  to {
+    background-position: 185px 0, center 0, center 115px, center 142px;
+  }
+}
