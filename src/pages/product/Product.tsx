@@ -11,8 +11,8 @@ const Product = () => {
   const dispatch = useDispatch();
   return (
     <>
-      <div className="py-5 px-5">
-        <Breadcrumbs className="hidden sm:block w-full">
+      <div className="py-5 px-5 w-full">
+        <Breadcrumbs className="hidden sm:flex">
           <Link to={"/"} className="opacity-60 text-[10px] md:text-[14px]">
             Каталог товаров
           </Link>
@@ -30,9 +30,9 @@ const Product = () => {
         </Breadcrumbs>
       </div>
       <div className="py-5 flex flex-col gap-y-4 px-5 w-full lg:flex-row justify-between">
-        <div className="w-[90%] mx-auto lg:w-[45%] py-5 lg:h-[60vh] h-screen">
+        <div className="w-[90%] mx-auto lg:w-[45%] py-5 lg:h-[60vh] h-[70vh]">
           <Carousel
-            className="rounded-xl w-full h-[100vh] sm:h-full"
+            className="rounded-xl w-full h-full sm:h-full"
             prevArrow={({ handlePrev }) => (
               <IconButton
                 variant="text"
