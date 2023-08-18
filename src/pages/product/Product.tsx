@@ -12,7 +12,7 @@ const Product = () => {
   return (
     <>
       <div className="py-5 px-5">
-        <Breadcrumbs className="hidden sm:block">
+        <Breadcrumbs className="hidden sm:block w-full">
           <Link to={"/"} className="opacity-60 text-[10px] md:text-[14px]">
             Каталог товаров
           </Link>
