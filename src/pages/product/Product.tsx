@@ -12,7 +12,7 @@ const Product = () => {
   return (
     <>
       <div className="py-5 px-5">
-        <Breadcrumbs>
+        <Breadcrumbs className="hidden sm:block">
           <Link to={"/"} className="opacity-60 text-[10px] md:text-[14px]">
             Каталог товаров
           </Link>
@@ -32,7 +32,7 @@ const Product = () => {
       <div className="py-5 flex flex-col gap-y-4 px-5 w-full lg:flex-row justify-between">
         <div className="w-[90%] mx-auto lg:w-[45%] py-5 lg:h-[60vh] h-screen">
           <Carousel
-            className="rounded-xl w-full "
+            className="rounded-xl w-full h-[100vh] sm:h-full"
             prevArrow={({ handlePrev }) => (
               <IconButton
                 variant="text"

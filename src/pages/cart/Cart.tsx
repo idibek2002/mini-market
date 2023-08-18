@@ -40,7 +40,7 @@ const Cart = () => {
                   <tr>
                     <th className="text-center w-[30%]">Товар</th>
                     <th className="text-center w-[10%]">Цена</th>
-                    <th className="text-center w-[10%] px-5">Количество</th>
+                    <th className="text-center w-[10%]">Количество</th>
                     <th className="text-center w-[10%]">Итого</th>
                     <th className="text-center w-[10%]"></th>
                   </tr>
@@ -49,7 +49,7 @@ const Cart = () => {
                   {cart?.map((el: TProduct) => {
                     return (
                       <tr key={el.id} className="lg:min-h-[50px]">
-                        <td className="flex items-center gap-x-5 min-h-[50px]">
+                        <td className="flex items-center flex-col gap-x-5 min-h-[50px]">
                           <picture className="hidden sm:block">
                             <img
                               src={el.thumbnail}
@@ -66,13 +66,13 @@ const Cart = () => {
                           ).toFixed(2)}{" "}
                           $
                         </td>
-                        <td>
-                          <div className="flex w-[70%] mx-auto items-center justify-center bg-blue-500 rounded-xl">
+                        <td className="px-2">
+                          <div className="flex mx-auto items-center justify-center bg-blue-500 rounded-xl">
                             <Button
                               onClick={() => dispatch(decrement(el.id))}
                               color="blue"
                               disabled={el.quantity == 1}
-                              className="w-10 h-10 flex items-center justify-center text-[18px]"
+                              className=" h-10 flex items-center justify-center text-[18px]"
                             >
                               -
                             </Button>
@@ -81,7 +81,7 @@ const Cart = () => {
                               onClick={() => dispatch(increment(el.id))}
                               color="blue"
                               disabled={el.quantity == el.stock}
-                              className="w-10 h-10 flex items-center justify-center text-[18px]"
+                              className=" h-10 flex items-center justify-center text-[18px]"
                             >
                               +
                             </Button>

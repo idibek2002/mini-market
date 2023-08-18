@@ -53,15 +53,13 @@ const Layout = () => {
           <Navbar className="px-4 py-2 max-w-[1200px] shadow-none rounded-none">
             <div className="w-full flex items-center h-14 justify-between text-blue-gray-900">
               <Link to={"/"}>
-                <Typography
-                  as="a"
+                <h1
                   variant="h4"
-                  className="mr-4 cursor-pointer py-1.5 lg:ml-2"
+                  className="mr-4 cursor-pointer py-1.5 lg:ml-2 text-[20px] font-[700] sm:text-[25px]"
                 >
                   Market
-                </Typography>
+                </h1>
               </Link>
-
               <div className="hidden lg:block">
                 <Menu
                   open={isMenuOpen}
@@ -170,7 +168,7 @@ const Layout = () => {
                   ) : null}
                 </div>
               </div>
-              <div className="gap-5 flex">
+              <div className="gap-5 flex fixed bottom-[-80vh] right-5 sm:relative sm:right-0 sm:top-0">
                 <Link to={"/cart"}>
                   <Badge content={card.length ? card.length : 0}>
                     <IconButton>

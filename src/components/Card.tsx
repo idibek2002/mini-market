@@ -49,7 +49,7 @@ export function ProductCard({
         <CardHeader
           shadow={false}
           floated={false}
-          className="min-h-56 sm:h-56 flex items-center justify-center"
+          className="h-80 sm:h-56  flex items-center justify-center"
         >
           <img
             src={img}

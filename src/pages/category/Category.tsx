@@ -60,8 +60,8 @@ const Catalog = () => {
           </h1>
         </Breadcrumbs>
       </div>
-      <div className="py-5 flex px-5">
-        <div className="w-[300px] hidden lg:block">
+      <div className="py-5 flex md:flex-row px-5 flex-col">
+        <div className="w-full md:w-[300px] block">
           <div>
             <Typography
               variant="h6"
@@ -90,7 +90,7 @@ const Catalog = () => {
           </div>
           <div>
             <div className="flex gap-x-2 py-2">
-              <ul>
+              <ul className="flex flex-col gap-2">
                 <Typography
                   variant="h6"
                   className="py-2 text-[#455A64] text-[14px]"
@@ -99,7 +99,7 @@ const Catalog = () => {
                 </Typography>
                 {brands.map((item: string, index) => {
                   return (
-                    <li key={index} className="flex items-center">
+                    <li key={index} className="flex items-center gap-x-4">
                       <input
                         id={item}
                         type="checkbox"
@@ -128,7 +128,7 @@ const Catalog = () => {
             </div>
           </div>
         </div>
-        <div className="w-full grid px-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-4">
+        <div className="w-full grid px-5 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
           {isLoading ? (
             <Loader />
           ) : (
