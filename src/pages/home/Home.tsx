@@ -65,10 +65,10 @@ const Home = () => {
         <div className="p-5">
           <h1 className="text-[25px]">Категории</h1>
           <div className="py-5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
-            {category.map((el: string) => {
+            {category?.map((el: {name: string, slug: string}) => {
               return (
-                <Link to={`/category/${el}`} className="px-4 py-2 bg-gray-200 rounded text-gray-800">
-                  {el}
+                <Link to={`/category/${el.slug}`} className="px-4 py-2 bg-gray-200 rounded text-gray-800">
+                  {el.name}
                 </Link>
               );
             })}

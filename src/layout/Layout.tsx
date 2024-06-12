@@ -45,6 +45,7 @@ const Layout = () => {
   const { data = [] } = useGetCategoryProductsQuery("");
   const { data: searchData = [] } = useSearchProductQuery(search);
   const card = useSelector(({ basket }) => basket?.products);
+  
 
   return (
     <>
@@ -97,12 +98,12 @@ const Layout = () => {
                   </MenuHandler>
                   <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
                     <ul className="grid grid-cols-4 gap-y-2">
-                      {data?.map((item: string, index: number) => (
+                      {data?.map((item: {name: string}) => (
                         <Link
-                          to={`/category/${item}`}
-                          key={index}
+                          to={`/category/${item?.name}`}
+                          key={item.name}
                           style={
-                            location.pathname.split("/")[2] === item
+                            location.pathname.split("/")[2] === item?.name
                               ? { backgroundColor: "#ECEFF180" }
                               : { backgroundColor: "#fff" }
                           }
@@ -114,9 +115,7 @@ const Layout = () => {
                               color="blue-gray"
                               className="flex items-center text-[14px] font-[500]"
                             >
-                              {`${item.charAt(0).toUpperCase()}${item.substring(
-                                1
-                              )}`}
+                              {`${item?.name}`}
                             </Typography>
                           </MenuItem>
                         </Link>
